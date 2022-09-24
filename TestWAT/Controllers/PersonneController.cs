@@ -3,12 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
 using TestWAT.Models;
 
 namespace TestWAT.Controllers
 {
-    public class PersonneControleur : Controller
+    public class PersonneController : Controller
     {
         // recupere entities pour le controleur en entier
 
@@ -17,7 +16,7 @@ namespace TestWAT.Controllers
         #endregion
 
         #region Constructeurs
-        public PersonneControleur(AppDbContext dbcontext)
+        public PersonneController(AppDbContext dbcontext)
         {
             this._dbcontext = dbcontext;
         }
@@ -50,3 +49,4 @@ namespace TestWAT.Controllers
 
     }
 }
+
