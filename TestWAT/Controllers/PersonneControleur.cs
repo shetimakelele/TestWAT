@@ -23,7 +23,7 @@ namespace TestWAT.Controllers
         }
         #endregion
 
-        public IActionResult PersonneList()
+        public IActionResult ListPersonne()
         {
             //on recupere notre liste
 
@@ -32,5 +32,21 @@ namespace TestWAT.Controllers
 
             return View(query.ToList());
         }
+
+        // methode GET de la creation
+        public IActionResult CreerPersonne()
+        {
+            return View();
+        }
+
+        // methode POST de la creation
+        [HttpPost]
+        public ActionResult CreerPersonne(Personne personne)
+        {
+            this._dbcontext.Personnes.Add(personne);
+            this._dbcontext.SaveChanges();
+            return View();
+        }
+
     }
 }
