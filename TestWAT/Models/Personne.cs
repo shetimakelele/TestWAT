@@ -1,19 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace TestWAT.Core.Data.Models
+namespace TestWAT.Models
 {
     public class Personne
     {
-        public int PersonnrId { get; set; }
+        [Key]
+        public int PersonneId { get; set; }
 
+        [Required]
         public string Nom { get; set; }
 
         public string Prenom { get; set; }
 
         public DateTime DateDeNaissance { get; set; }
 
-        
+
     }
 }
